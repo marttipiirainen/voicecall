@@ -236,3 +236,10 @@ void VoiceCallHandlerDBusAdapter::sendDtmf(const QString &tones)
     Q_D(VoiceCallHandlerDBusAdapter);
     d->handler->sendDtmf(tones);
 }
+
+void VoiceCallHandlerDBusAdapter::stopDtmf()
+{
+    TRACE
+    Q_D(VoiceCallHandlerDBusAdapter);
+    d->handler->stopDtmf();
+}

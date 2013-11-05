@@ -167,6 +167,13 @@ void AudioCallPolicyProxy::sendDtmf(const QString &tones)
     d->subject->sendDtmf(tones);
 }
 
+void AudioCallPolicyProxy::stopDtmf()
+{
+    TRACE
+    Q_D(AudioCallPolicyProxy);
+    d->subject->stopDtmf();
+}
+
 void AudioCallPolicyProxy::invokeWithResources(QObject *receiver, const QString &method)
 {
     TRACE

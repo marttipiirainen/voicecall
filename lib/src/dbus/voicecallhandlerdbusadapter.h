@@ -75,6 +75,7 @@ public Q_SLOTS:
     bool hold(bool on);
     bool deflect(const QString &target);
     void sendDtmf(const QString &tones);
+    void stopDtmf();
 
 protected:
     VoiceCallHandlerDBusAdapter(class VoiceCallHandlerDBusAdapterPrivate &d, AbstractVoiceCallHandler *parent = 0)

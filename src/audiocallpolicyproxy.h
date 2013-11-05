@@ -51,6 +51,7 @@ public Q_SLOTS:
     void hold(bool on);
     void deflect(const QString &target);
     void sendDtmf(const QString &tones);
+    void stopDtmf();
 
 protected Q_SLOTS:
     void invokeWithResources(QObject *receiver, const QString &method);
