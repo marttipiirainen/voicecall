@@ -315,6 +315,15 @@ void TelepathyHandler::sendDtmf(const QString &tones)
     //dtmfIface->MultipleTones(tones);
 }
 
+void TelepathyHandler::stopDtmf()
+{
+    TRACE
+    Q_D(TelepathyHandler);
+    Tp::Client::ChannelInterfaceDTMFInterface *dtmfIface = new Tp::Client::ChannelInterfaceDTMFInterface(d->channel.data(), this);
+
+    dtmfIface->StopTone(1, 0);
+}
+
 void TelepathyHandler::onCallChannelChannelReady(Tp::PendingOperation *op)
 {
     TRACE

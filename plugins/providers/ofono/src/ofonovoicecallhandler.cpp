@@ -217,6 +217,12 @@ void OfonoVoiceCallHandler::sendDtmf(const QString &tones)
     d->ofonoVoiceCallManager->sendTones(tones);
 }
 
+void OfonoVoiceCallHandler::stopDtmf()
+{
+    TRACE
+    DEBUG_T("not implemented");
+}
+
 void OfonoVoiceCallHandler::timerEvent(QTimerEvent *event)
 {
     TRACE

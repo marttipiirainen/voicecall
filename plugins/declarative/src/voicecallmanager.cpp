@@ -245,6 +245,12 @@ bool VoiceCallManager::stopDtmfTone()
 {
     TRACE
     Q_D(VoiceCallManager);
+
+    if(d->activeVoiceCall)
+    {
+        d->activeVoiceCall->stopDtmf();
+    }
+
     d->tonegend->call("StopTone");
     return true;
 }

@@ -90,6 +90,7 @@ public Q_SLOTS:
     virtual void hold(bool on) = 0;
     virtual void deflect(const QString &target) = 0;
     virtual void sendDtmf(const QString &tones) = 0;
+    virtual void stopDtmf() = 0;
 };
 
 #endif // ABSTRACTVOICECALLHANDLER_H
